@@ -9,7 +9,7 @@
     - Cloud Foundry, Node.js, Continuous Delivery
   - SQL Database for Cloud Database
     - Cloud Foundry, Python, Db2 Warehouse
-  - [Serverless Web application and API](/Web Site and Web Application/Serverless web application and API.md)
+  - [Serverless Web application and API](./Web Site and Web Application/Serverless web application and API.md)
     - Cloud Foundry, API Gateway, Cloudant NoSQL DB
   - Analyze logs and monitor health of Cloud Foundry application
     - Cloud Foundry, Python, Log Analysis, Availability Monitoring
