@@ -27,4 +27,4 @@
 チュートリアルではIBM Cloudのコマンドラインインターフェースを利用します。以下の資料に従って bx cli と必要とされるプラグインを導入してください。
 - [IBM Cloud Developer Tools](https://github.com/IBM-Cloud/ibm-cloud-developer-tools)
 
-上記ツール以外に、curlやgitのコマンドラインインターフェイスやbashを利用するケースもあります。必要に応じて導入してください。
+上記ツール以外に、curlやgitのコマンドラインインターフェイスやbashを利用するケースもあります、必要に応じて導入してください。
