@@ -12,7 +12,7 @@
 - [Cloud Functions](https://console.bluemix.net/openwhisk/)
 
 ## アーキテクチャ
-![アーキテクチャ](images/arch.png)
+![アーキテクチャ](images/serverless/arch.png)
 
 1. ユーザーはGitHub Pagesでホストされる静的Webページへとアクセスする
 2. Webページ（アプリケーション）はバックエンドのAPIを呼び出す
@@ -26,7 +26,7 @@
 ## Cloudant NoSQL Databaseの作成
 始めにCloudant NoSQL Database上に今回利用する*Guestbook*データベースを作成します。Cloudant NoSQL DBはModern Web/モバイルようにデザインされており、JSONスキーマを利用した柔軟なデータ管理が可能です。またApache Couch DBと互換性があり、セキュアなHTTPS APIを利用してアクセスが可能なデータベースです。
 
-![catalog](images/catalog.png)
+![catalog](images/serverless/catalog.png)
 
 1. カタログページにて**データ＆分析**から**Cloudant NoSQL DB**を選択します.
 2. サービス名に ***guestbook-db*** を設定し、任意のスペースにデプロイします。
@@ -35,12 +35,12 @@
 5. ***guestbook*** という名前でデータベースを作成します。
 
 
-![DB作成](images/createdb.png)
+![DB作成](images/serverless/createdb.png)
 
 ## Cloud Functionsアクションの作成
 IBM Cloud Functions にてServerless アクションを作成します。IBM Cloud Functions は発生したイベントに応じて機能が実行される実行Apache OpenWhiskをベースにしたFunction-as-a-Service(FaaS)です。IBM Cloud Functionsでは、いくつかのアクションをまとめてシーケンスと呼ばれるアクショングループを作成することも可能です。シーケンスは、1つのアクションのアウトプットを、次のアクションのインプットとする実行の単位となります。
 
-![cloud functions](images/functions.png)
+![cloud functions](images/serverless/functions.png)
 
 ### *guestbook* 登録シーケンスの作成
 最初に作成するシーケンスは、以下のアクションを実行します。
@@ -105,7 +105,7 @@ function main(params) {
 
 17. **起動** をクリックします。次のような結果が表示されることを確認します。
 
-![result](images/result.png)
+![result](images/serverless/result.png)
 
 ここまでの作業でCloudant NoSQL DBにデータを保管するシーケンスが作成されました。
 
@@ -155,14 +155,14 @@ function main(params) {
 ```
 10. 左側ペインで「アクション」を選択し、***read-guestbook-entries-sequence*** をクリックして表示後 **保存** をクリックします。
 11. **起動** をクリックして結果を確認します。次のような結果が表示されます
-![res](images/result2.png)
+![res](images/serverless/result2.png)
 
 ここまでの作業でCloudant NoSQL DBに保管されているデータを取得するシーケンスが作成されました。続いてこれまで作成したアクション／シーケンスをREST APIを利用して実行できるようにAPIの設定を行います。
 
 ## APIの作成
 IBM Cloud Functionsでは作成したアクション／シーケンスをREST APIとして公開できます。API作成後は、アクセスを制限するために認証を設定したり、呼び出し回数を制御することができます。また、APIの利用統計表示／応答ログの確認が容易にできるインターフェイスも用意されています。また、作成したAPIをIBM Cloud利用者／外部の利用者に公開することも可能になります
 
-![cfapi](images/cfapi.png)
+![cfapi](images/serverless/cfapi.png)
 
 1. IBM Cloud Functions画面左側ペインで「アクション」を選択し、これまで作成したアクション、シーケンス一覧を表示させます。（デフォルト・パッケージセクションに表示されます）
 2. ***read-guestbook-entries-sequence*** を選択し、表示された画面の左側ペインで **エンドポイント** をクリックします。
@@ -182,7 +182,7 @@ IBM Cloud Functionsでは作成したアクション／シーケンスをREST AP
   - アクション： save-guestbook-entries-sequence
 11. API管理画面の **操作** セクションが次のようになっていることを確認し、画面最下部の保存をクリックします。
 
-![apiresult](images/apiresult.png)
+![apiresult](images/serverless/apiresult.png)
 
 ここまでの作業で作成したシーケンスをREST API経由で実行するWebアクションが作成されました。
 
@@ -194,7 +194,11 @@ IBM Cloud Functionsでは作成したアクション／シーケンスをREST AP
 
 
 1. 自分のGitHubに https://github.com/IBM-Cloud/serverless-guestbook にあるコードを配置します。
-2. **docs/guestbook.js** ファイル中 **apiUrl** を作成したAPIのパスに変更し、commitｈします。
+2. **docs/guestbook.js** ファイル中 **apiUrl** を作成したAPIのパスに変更し、commitします。
 3. 自分のリポジトリの設定ページにて **GitHub Pages** を表示させ、ソースを **master branch /docs folder** に変更して保存します。
 4. 作成したWebページにアクセスします。あらかじめ登録されている"test"というエントリーがみつかるはずです。
 5. 新規のエントリーを追加して動作を確認します。
+
+---
+
+これでこのチュートリアルは終了です。
