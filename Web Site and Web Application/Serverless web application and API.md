@@ -21,10 +21,10 @@
 5. Cloud FunctionsはCloudantへデータを格納する
 
 ## チュートリアル開始前に
-このチュートリアルでは GitHub上のページをWebサイトとして利用します。このためチュートリアルを完了させるためには GitHub のアカウントを所持している必要があります。
+　このチュートリアルでは GitHub上のページをWebサイトとして利用します。このためチュートリアルを完了させるためには GitHub のアカウントを所持している必要があります。
 
 ## Cloudant NoSQL Databaseの作成
-始めにCloudant NoSQL Database上に今回利用する*Guestbook*データベースを作成します。Cloudant NoSQL DBはModern Web/モバイルようにデザインされており、JSONスキーマを利用した柔軟なデータ管理が可能です。またApache Couch DBと互換性があり、セキュアなHTTPS APIを利用してアクセスが可能なデータベースです。
+　始めにCloudant NoSQL Database上に今回利用する*Guestbook*データベースを作成します。Cloudant NoSQL DBはModern Web/モバイルようにデザインされており、JSONスキーマを利用した柔軟なデータ管理が可能です。またApache Couch DBと互換性があり、セキュアなHTTPS APIを利用してアクセスが可能なデータベースです。
 
 ![catalog](images/serverless/catalog.png)
 
@@ -38,7 +38,7 @@
 ![DB作成](images/serverless/createdb.png)
 
 ## Cloud Functionsアクションの作成
-IBM Cloud Functions にてServerless アクションを作成します。IBM Cloud Functions は発生したイベントに応じて機能が実行される実行Apache OpenWhiskをベースにしたFunction-as-a-Service(FaaS)です。IBM Cloud Functionsでは、いくつかのアクションをまとめてシーケンスと呼ばれるアクショングループを作成することも可能です。シーケンスは、1つのアクションのアウトプットを、次のアクションのインプットとする実行の単位となります。
+　IBM Cloud Functions にてServerless アクションを作成します。IBM Cloud Functions は発生したイベントに応じて機能が実行される実行Apache OpenWhiskをベースにしたFunction-as-a-Service(FaaS)です。IBM Cloud Functionsでは、いくつかのアクションをまとめてシーケンスと呼ばれるアクショングループを作成することも可能です。シーケンスは、1つのアクションのアウトプットを、次のアクションのインプットとする実行の単位となります。
 
 ![cloud functions](images/serverless/functions.png)
 
@@ -79,7 +79,7 @@ function main(params) {
 （表示されない場合「F5」キー等を利用して画面をリフレッシュします）
 10. ***save-guestbook-entry-sequence*** リンクをクリックします。
 
-引き続きシーケンスを作成します。IBM Cloud Functionsではあらかじめいくつかのアクション／シーケンスがパブリックパッケージとして用意されており、今回は用意されたCloudant用パッケージを利用してデータをCloudant NoSQL DB へ保存します。
+　引き続きシーケンスを作成します。IBM Cloud Functionsではあらかじめいくつかのアクション／シーケンスがパブリックパッケージとして用意されており、今回は用意されたCloudant用パッケージを利用してデータをCloudant NoSQL DB へ保存します。
 
 11. 表示されたシーケンス画面で **追加** をクリックします。
 12. アクションの追加画面で、**パブリックの使用** を選択し **Cloudant** を選択します。
@@ -91,7 +91,7 @@ function main(params) {
   - その他はデフォルトのまま
 14. シーケンス表示画面で「保存」をクリックし、作成したシーケンスを保存します。
 
-最後にこれまで作成したシーケンスを検証します
+　最後にこれまで作成したシーケンスを検証します
 
 15. シーケンス画面で **入力の変更** をクリックします。
 16. 表示されたポップアップ画面に、以下のコードを入力して **適用** をクリックします。
@@ -107,10 +107,10 @@ function main(params) {
 
 ![result](images/serverless/result.png)
 
-ここまでの作業でCloudant NoSQL DBにデータを保管するシーケンスが作成されました。
+　ここまでの作業でCloudant NoSQL DBにデータを保管するシーケンスが作成されました。
 
 ### *guestbook* 登録文書取得シーケンスの作成
-引き続きシーケンスを作成します。このシーケンスは次のアクションを実行します。
+　引き続きシーケンスを作成します。このシーケンスは次のアクションを実行します。
 
 * データベースに登録された文書をすべてリストアップする
 * 文書を整形して返す
@@ -157,10 +157,10 @@ function main(params) {
 11. **起動** をクリックして結果を確認します。次のような結果が表示されます
 ![res](images/serverless/result2.png)
 
-ここまでの作業でCloudant NoSQL DBに保管されているデータを取得するシーケンスが作成されました。続いてこれまで作成したアクション／シーケンスをREST APIを利用して実行できるようにAPIの設定を行います。
+　ここまでの作業でCloudant NoSQL DBに保管されているデータを取得するシーケンスが作成されました。続いてこれまで作成したアクション／シーケンスをREST APIを利用して実行できるようにAPIの設定を行います。
 
 ## APIの作成
-IBM Cloud Functionsでは作成したアクション／シーケンスをREST APIとして公開できます。API作成後は、アクセスを制限するために認証を設定したり、呼び出し回数を制御することができます。また、APIの利用統計表示／応答ログの確認が容易にできるインターフェイスも用意されています。また、作成したAPIをIBM Cloud利用者／外部の利用者に公開することも可能になります
+　IBM Cloud Functionsでは作成したアクション／シーケンスをREST APIとして公開できます。API作成後は、アクセスを制限するために認証を設定したり、呼び出し回数を制御することができます。また、APIの利用統計表示／応答ログの確認が容易にできるインターフェイスも用意されています。また、作成したAPIをIBM Cloud利用者／外部の利用者に公開することも可能になります
 
 ![cfapi](images/serverless/cfapi.png)
 
@@ -184,13 +184,13 @@ IBM Cloud Functionsでは作成したアクション／シーケンスをREST AP
 
 ![apiresult](images/serverless/apiresult.png)
 
-ここまでの作業で作成したシーケンスをREST API経由で実行するWebアクションが作成されました。
+　ここまでの作業で作成したシーケンスをREST API経由で実行するWebアクションが作成されました。
 
 ``なおこのチュートリアルの例では、アクセス制御／速度制限等の設定は行っていないため、だれでもシーケンスを実行できる状態になっています。実際に利用される場合は、API定義画面で認証等の設定を実施してください。
 ``
 
 ## Webアプリケーションのデプロイ
-最後にWebアプリケーションを作成し、チュートリアルで作成したAPIを実行させます。
+　最後にWebアプリケーションを作成し、チュートリアルで作成したAPIを実行させます。
 
 
 1. 自分のGitHubに https://github.com/IBM-Cloud/serverless-guestbook にあるコードを配置します。
