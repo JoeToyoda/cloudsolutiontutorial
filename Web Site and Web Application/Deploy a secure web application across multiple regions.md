@@ -1,7 +1,7 @@
 # Deploy a secure web application across multiple regions
 - このチュートリアルでは、**continuous delivery pipeline** を利用して、複数リージョンにまたがるWebアプリケーションをセキュアに作成し、デプロイする方法を学びます。
 
-## チュートリアルの目的
+## チュートリアルの内容
 - ソース管理とcontinues deliveryのセットアップ
 - 複数リージョンへとWebアプリケーションをデプロイ
 - アプリケーションのパフォーマンスをモニターする

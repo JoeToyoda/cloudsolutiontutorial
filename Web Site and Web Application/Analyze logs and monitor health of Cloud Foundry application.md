@@ -2,7 +2,7 @@
 - このチュートリアルでは、**IBM Cloud Log Analysis** を利用してIBM Cloud上にデプロイされたCloud Foundryアプリケーションの状態を把握する方法を学びます。ここでは、Python ランタイムから出力される様々なタイプのログをIBM Cloud Log Analysisで提供されるApache Kibanaを利用して解析します。さらにAvailability Monitoringサービスを利用して、アプリケーションの状態を動的にチェックする方法を学びます
 
 
-## チュートリアルの目的
+## チュートリアルの内容
 - IBM Cloud Log Analysis/Availability Monitoringサービスのプロビジョニング
 - アプリケーションログの取得方法／ログ解析／ログの可視化方法の理解
 - 通知サービスの利用

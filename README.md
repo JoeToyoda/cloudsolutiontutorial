@@ -18,7 +18,7 @@
   - Mobile application with a Serverless backend
     - Cloud Functions, App ID, Cloudant NoSQL DB, Watson Tone Analyzer, Push Notifications
 - Internet of Things
-  - Gather, visualize and analyze IoT data
+  - [Gather, visualize, and analyze IoT data](Internet%20of%20Things/Gather,%20visualize,%20and%20analyze%20IoT%20data.md)
     - Cloud Foundry, Internet of Things Platform, Cloudant, Data Science Experience
 
 ## この資料の前提

@@ -1,7 +1,7 @@
 # Serveless web application and API
 - このチュートリアルでは、GitHubページに静的なコンテンツを配置し、Cloud Functionsを利用してIBMCloud 上のデータベースにデータを保存するWebサイトを作成します。
 
-## チュートリアルの目的
+## チュートリアルの内容
 - 操作にServelessを利用するバックエンドデータベースのデプロイ
 - REST APIの公開
 - 静的Webサイトの公開
