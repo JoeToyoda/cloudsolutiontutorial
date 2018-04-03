@@ -2,7 +2,7 @@
 　このチュートリアルでは、IoT deviceをセットアップし、Watson IoT platformに収集したのち、データの可視化とmachine learningサービスを利用してデータを分析して履歴データから異常を検出するまでの一連の流れを学習します。
 
 ## チュートリアルの内容
-- Iot Simulatorのセットアップ
+- IoT Simulatorのセットアップ
 - 収集したデータをWatson IoTPlatformへ送信
 - データの可視化
 - デバイスが生成したデータを解析し、異常を検知する
@@ -63,6 +63,8 @@ bx cf push
 5. ***<manifest.ymlで指定したホスト名>.mybluemix.net*** というURLでアプリケーションがデプロイされます。デプロイ完了までしばらく待ったのち、モバイルデバイスのブラウザーからこのURLにhttpプロトコルでアクセスします。
 6. **Organization ID** に組織のID（IoT Platform Dashboardの右上に表示されていrます）、**Device Type** に ***simulator***、**Device ID** に ***phone***、**Authentication Token** に先ほど設定した **認証トークン**(この資料では ***My_Auth_Token_01***)と入力し、**Connect** ボタンをクリックします。
 7. ブラウザ上でメッセージのプッシュが確認できます。IBM Watson Iot Platform Tabに戻り、**最近のイベント** リンクをクリックすると、受信されたデータが表示されます。
-![phone](images/IoT/phone.png)![recent](images/IoT/recentevent.png)
+
+![phone](images/IoT/phone.png)
+![recent](images/IoT/recentevent.png)
 
 ## ライブデータの表示
