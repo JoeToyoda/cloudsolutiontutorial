@@ -6,7 +6,7 @@
 - Webサイト/Webアプリケーション
   - [Deploy a secure web application across multiple regions](Web%20Site%20and%20Web%20Application/Deploy%20a%20secure%20web%20application%20across%20multiple%20regions.md)
     - Cloud Foundry, Node.js, Continuous Delivery
-  - SQL Database for Cloud Database
+  - [SQL Database for Cloud Database](Web%20Site%20and%20Web%20Application/SQL%20Database%20for%20Cloud%20Database.md)
     - Cloud Foundry, Python, Db2 Warehouse
   - [Serverless Web application and API](Web%20Site%20and%20Web%20Application/Serverless%20web%20application%20and%20API.md)
     - Cloud Foundry, API Gateway, Cloudant NoSQL DB
