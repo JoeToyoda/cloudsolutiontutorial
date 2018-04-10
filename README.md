@@ -12,11 +12,8 @@
     - Cloud Foundry, API Gateway, Cloudant NoSQL DB
   - [Analyze logs and monitor health of Cloud Foundry application](Web%20Site%20and%20Web%20Application/Analyze%20logs%20and%20monitor%20health%20of%20Cloud%20Foundry%20application.md)
     - Cloud Foundry, Python, Log Analysis, Availability Monitoring
-  - Create, secure and manage REST APIs
+  - [Create, secure and manage REST APIs](Web%20Site%20and%20Web%20Application/Create%20secure%20and%20manage%20REST%20APIs.md)
     - Cloud Foundry, Node.js, API Connect
-- Mobile
-  - Mobile application with a Serverless backend
-    - Cloud Functions, App ID, Cloudant NoSQL DB, Watson Tone Analyzer, Push Notifications
 - Internet of Things
   - [Gather, visualize, and analyze IoT data](Internet%20of%20Things/Gather%20visualize%20and%20analyze%20IoT%20data.md)
     - Cloud Foundry, Internet of Things Platform, Cloudant, Data Science Experience

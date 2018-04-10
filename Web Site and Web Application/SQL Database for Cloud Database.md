@@ -6,7 +6,6 @@
 - データベーススキーマ（テーブル）の作成
 - データのロード
 - Credentialを共有してアプリケーションとデータベースサービスを接続する
-- 監視、セキュリティ、バックアップ＆リカバリーについて
 
 ## 利用製品／サービス
 - [Db2 Warehouse](https://console.bluemix.net/catalog/services/db2-warehouse)
@@ -19,7 +18,7 @@
 
 1. [カタログページ](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=data)にて　**データ＆分析**　から　**Db2 Warehouse** を選択します.
 ![db2ware](images/db/db2ware.png)
-2. 価格プランにて **Entry** を選択し、作成します。サービス名は任意のもの（例：*sqldatabase*）に設定し、地域／組織／スペースを確認して **作成** をクリックします。
+2. 価格プランにて **Entry** を選択し、作成します。サービス名は *sqldatabase* に設定し、地域／組織／スペースを確認して **作成** をクリックします。
 3. 作成が完了するとDashboardが開きます。**Open** をクリックしてdatabase consoleを表示させます。
 
 ## テーブル作成
@@ -51,7 +50,6 @@
 select count(*) from cities
 ```
 入力後、**Run All** ボタンをクリックします。画面下部の結果表示部にSQL実行結果が表示されます。
-
 3. **SQL Editor** 画面に次のコマンドを入力します。
 ```bash
 select countrycode, count(name) from cities
@@ -60,8 +58,32 @@ order by 2 desc
 ```
 4. **SQL Editor** 領域で入力したコマンドを選択後、**Run Selected** ボタンをクリックします。選択したSQLのみが実行され、結果が表示されます。
 
-## データ表示用アプリケーションのデプロイ
+## データ表示用アプリケーションのデプロイおよびでーた表示
+　続いて、データ表示用のアプリケーションをデプロイします。アプリケーションはすでに用意されているものをGitHubからCloneする形で取得し、デプロイします。
 
-## データ表示用アプリケーションでのデータ表示
+1. 次のコマンドでアプリケーションをGitHubからCloneします。
+```bash
+git clone https://github.com/IBM-Cloud/cloud-sql-database
+cd cloud-sql-database
+```
+2. IBM CloudへCloneされたアプリケーションをPushします。アプリケーション名は任意です。
+```bash
+bx login
+…(ログイン処理)…
+bx target –cf
+…(ターゲットスペース設定処理)…
+bx cf push <アプリケーション名>
+…(アプリケーションのPush処理)…
+```
+3. デプロイが完了後、アプリケーションにアクセスします。アクセスするurlについては、デプロイ結果に表示されています。または、以下のコマンドで表示されるアプリケーション情報のurl部分に記載されています。
+```bash
+bx cf apps
+```
 
-## 監視、セキュリティー、バックアップ＆リカバリーについて
+　アプリケーションは、データベースにロードされているデータをもとに都市の情報を表示します。
+検索の際に、入力された文字列をもとに  ``/search?name=cityname`` というパスが作成され、SQLに変換されてデータを取得する動きになっています。
+取得されたデータはHTMLのテンプレートを元に画面表示されます。
+
+---
+
+これでこのチュートリアルは終了です。
